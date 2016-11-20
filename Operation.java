@@ -1,13 +1,13 @@
 public enum Operation {
     SUB(new Substruction()), ADD(new Addition()), MULT(new Multiplication()), DIV(new Division());
 
-    Calculator ret;
+    Calculator operation;
 
     Operation(Calculator operation) {
-        ret = operation;
+        this.operation = operation;
     }
 
     public double calculate(int first, int second) {
-        return ret.calculate(first, second);
+        return operation.calculate(first, second);
     }
 }
